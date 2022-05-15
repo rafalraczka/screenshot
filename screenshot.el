@@ -255,8 +255,7 @@ and the line number of the first line of the region."
   "Modify the current buffer to make it appropriate for screenshotting."
   (setq-local face-remapping-alist '((line-number-current-line line-number)
                                      (show-paren-match nil)
-                                     (region nil))
-              line-spacing 0.1)
+                                     (region nil)))
   (when (bound-and-true-p hl-line-mode) (hl-line-mode -1))
   (when (bound-and-true-p solaire-mode) (solaire-mode -1))
   (run-hooks 'screenshot-buffer-creation-hook))
